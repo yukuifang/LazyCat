@@ -14,6 +14,8 @@ import Profile from './pages/Profile'
 
 import SignIn from  './pages/SignIn'
 
+import Popular from './pages/Popular'
+
 
 const Tab = TabNavigator(
     {
@@ -30,9 +32,9 @@ const Tab = TabNavigator(
             }),
         },
         Nearby:{
-            screen: Nearby,
+            screen: Popular,
             navigationOptions: ({ navigation }) => ({
-                tabBarLabel: 'Nearby',
+                tabBarLabel: 'Popular',
                 tabBarIcon: ({tintColor}) => (
                     <Image
                         source={require("./images/wode.jpg")}
@@ -87,7 +89,7 @@ const Tab = TabNavigator(
 
 const Navigator = StackNavigator(
     {
-        SigIn:{screen:SignIn},
+
         Tab: { screen: Tab },
     },
     {

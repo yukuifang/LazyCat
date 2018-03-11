@@ -125,7 +125,7 @@ export default class Home extends PureComponent {
 
 
 
-    _onPressItem = (id: string) => {
+    _onPressItem = (id) => {
         console.log(id)
         this.setState((state) => {
             const selected = new Map(state.selected);
